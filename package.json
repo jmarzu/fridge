@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/jmarzu/fridge#readme",
   "dependencies": {
+    "bcrypt": "^0.8.7",
     "body-parser": "^1.15.2",
+    "chai": "^3.5.0",
     "ejs": "^2.4.2",
     "express": "^4.14.0",
     "express-ajax": "^1.0.2",
