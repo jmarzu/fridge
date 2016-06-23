@@ -10,12 +10,10 @@ app.use(ejsLayouts);
 app.use(express.static('public'));
 
 app.get('/', function(req, res) {
-  // res.send('What\'s in your fridge?');
   res.render('mainPage');
 });
 
 app.get('/mainPage', function(req, res) {
-  // res.send('the button worked');
   res.render('searchFridge');
 });
 
