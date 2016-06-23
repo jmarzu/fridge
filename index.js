@@ -19,9 +19,7 @@ app.get('/mainPage', function(req, res) {
   res.render('searchFridge');
 });
 
-app.get('/searchFridge', function(req, res) {
-  res.render('recipies');
-})
+app.use('/searchFridge', require('./controllers/searchFridge'));
 
 var server = app.listen(process.env.PORT || 3000);
 
