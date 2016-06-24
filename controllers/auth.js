@@ -17,8 +17,10 @@ router.post('/signup', function(req, res) {
     }
   }).spread(function(user, created) {
     if(created) {
-      console.log('user created!');
-      res.redirect('/');
+      passport.authenticate('local', {
+        successRedirect: '/',
+        successFlash: 'User Created. You are logged in.'
+      })(req, res);
     } else {
       console.log('user with that email already exists');
       res.redirect('/auth/signup');
