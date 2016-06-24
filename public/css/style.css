@@ -1,5 +1,6 @@
 body {
   text-align: center;
+  background-image: url("");
 }
 
 h1 {
@@ -17,6 +18,7 @@ h3 {
 }
 
 .btn {
-  margin-top: 5px;
+  margin: 10px;
   font-size: large;
 }
+
