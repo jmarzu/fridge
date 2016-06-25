@@ -1,7 +1,8 @@
 body {
   text-align: center;
+  /*font-family: 'Roboto Salb', serif;*/
   background-image: url("https://stjosephvillage.files.wordpress.com/2014/09/18316788_l.jpg");
-  background-image: cover;
+  background-size: cover;
 }
 
 h1 {
@@ -12,6 +13,11 @@ h1 {
 h3 {
   font-size: 50px;
   font-family: 'Roboto Salb', serif;
+  margin-top: 50px;
+}
+
+form {
+  margin-top: 20px;
 }
 
 .input-group {
@@ -23,3 +29,8 @@ h3 {
   font-size: large;
 }
 
+/*#bodyDiv {
+  background: rgba(255, 255, 255, 0.5);
+  background-size: cover;
+}
+*/

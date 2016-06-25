@@ -11,7 +11,7 @@ var app = express();
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(ejsLayouts);
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
 app.use(session({
   secret: process.env.SESSION_SECRET,
   resave: false,
@@ -30,16 +30,13 @@ app.get('/', function(req, res) {
   res.render('mainPage');
 });
 
-app.get('/mainPage', function(req, res) {
-  res.render('searchFridge');
-});
-
 app.get('/profile', isLoggedIn, function(req, res) {
   res.render('profile');
 });
 
 app.use('/searchFridge', require('./controllers/searchFridge'));
 app.use('/auth', require('./controllers/auth'));
+app.use('/mainPage', require('./controllers/mainPage'));
 
 var server = app.listen(process.env.PORT || 3000);
 
