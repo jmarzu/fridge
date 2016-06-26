@@ -8,7 +8,9 @@ router.get('/', function(req, res) {
   } else {
     request({
       url: 'http://www.recipepuppy.com/api/',
-      q: req.query.q
+      qs: {
+        s: req.query.q
+      }
     }, function(error, response, body) {
       console.log('Query: ', req.query.q);
       if(!error && response.statusCode === 200) {

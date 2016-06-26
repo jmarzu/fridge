@@ -16,12 +16,12 @@ h3 {
   margin-top: 50px;
 }
 
-form {
-  margin-top: 20px;
+label {
+  font-color: black;
 }
 
-.input-group {
-  margin: auto;
+form {
+  margin-top: 20px;
 }
 
 .btn {
@@ -29,8 +29,16 @@ form {
   font-size: large;
 }
 
-/*#bodyDiv {
+.bodyDiv {
   background: rgba(255, 255, 255, 0.5);
   background-size: cover;
 }
-*/
+
+.signUpId {
+  text-align: left;
+}
+
+.bigPara {
+  width: 100%;
+}
+
