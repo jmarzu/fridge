@@ -1,7 +1,7 @@
 body {
   text-align: center;
-  /*font-family: 'Roboto Salb', serif;*/
-  background-image: url("https://stjosephvillage.files.wordpress.com/2014/09/18316788_l.jpg");
+  font-family: 'Roboto Salb', serif;
+  background-image: url("http://www.gmtoday.com/content/m_magazine/2013/January/images/94fridge.jpg");
   background-size: cover;
 }
 
@@ -16,8 +16,8 @@ h3 {
   margin-top: 50px;
 }
 
-label {
-  font-color: black;
+a {
+  color: black;
 }
 
 form {
@@ -38,15 +38,17 @@ form {
   text-align: left;
 }
 
-.bigPara {
-  width: 100%;
-}
-
 .recipeImage {
-  height: 150px;
+  height: 100px;
 }
 
-.imageDiv {
-  background: rgb(255, 255, 255);
+.btnResults {
+  display: flex;
+  text-align: center;
+}
+
+.imageTitle {
+  background: rgba(255, 255, 255, 0.5);
   background-size: cover;
+
 }
