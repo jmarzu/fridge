@@ -1,4 +1,9 @@
 <h3>Here are your recipies</h3>
 
+<% data.forEach(function(results) { %>
+  <h4><a href="<%= results.href %>"><%= results.title %></a></h4>
+  <div class="imageDiv"><img class="recipeImage" src="<%= results.thumbnail %>" alt="<%= results.title %>"></div>
+<% }); %>
+
 
 

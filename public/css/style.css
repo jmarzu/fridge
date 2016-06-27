@@ -42,3 +42,11 @@ form {
   width: 100%;
 }
 
+.recipeImage {
+  height: 150px;
+}
+
+.imageDiv {
+  background: rgb(255, 255, 255);
+  background-size: cover;
+}
