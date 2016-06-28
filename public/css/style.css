@@ -1,7 +1,7 @@
 body {
   text-align: center;
   font-family: 'Roboto Salb', serif;
-  background-image: url("http://www.gmtoday.com/content/m_magazine/2013/January/images/94fridge.jpg");
+  background: url("/img/fridge.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -59,4 +59,10 @@ form {
 
 .profileRecipeLink {
   color: blue;
+}
+
+@media (max-width: 600px) {
+  .mainPage {
+    margin-top: 300px;
+  }
 }

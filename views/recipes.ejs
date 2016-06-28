@@ -15,11 +15,11 @@
   <div class="imageDiv">
     <h4 class="imageDiv"><a href="<%= results.href %>"><%= results.title %></a></h4>
     <img class="materialboxed" src="<%= results.thumbnail %>" alt="<%= results.title %>">
-  <form action="/profile/:id" method="POST">
-    <input type="hidden" name="title" value="<%= results.title %>">
-    <input type="hidden" name="href" value="<%= results.href %>">
-    <button type="submit" class="waves-effect waves-light btn">Add to Favorites</button>
-  </form> 
+    <form action="/profile/:id" method="POST">
+      <input type="hidden" name="title" value="<%= results.title %>">
+      <input type="hidden" name="href" value="<%= results.href %>">
+      <button type="submit" class="waves-effect waves-light btn-large">Add to Favorites</button>
+    </form> 
   </div>
 <% }); %>
 
