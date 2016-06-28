@@ -1,16 +1,12 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var db = require('../models');
+//var isLoggedIn = require('./middleware/isLoggedIn');
 var router = express.Router();
 
-// app.use(bodyParser.urlencoded({ extended: false }));
-
-// router.get('/', function(req, res) {
-//   res.send('button worked');
-// });
-
-// router.get('/:id', function(req, res) {
-//   res.send('profile page for user');
-// });
+router.post('/:id', function(req, res) {
+  res.send('profile page for user');
+  res.render('profile');
+});
 
 module.exports = router;
