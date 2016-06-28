@@ -52,3 +52,11 @@ form {
   background-size: cover;
 
 }
+
+.profileFavorites {
+  border: 1px solid black;
+}
+
+.profileRecipeLink {
+  color: blue;
+}

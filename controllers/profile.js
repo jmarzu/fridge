@@ -5,8 +5,13 @@ var db = require('../models');
 var router = express.Router();
 
 router.post('/:id', function(req, res) {
-  res.send('profile page for user');
-  res.render('profile');
+  db.favorite.create({
+    userID: req.user.id,
+    title: req.body.title,
+    href: req.body.href
+  }).then(function(favorite) {
+    res.render('profile', { favorite: favorite });
+  });
 });
 
 module.exports = router;

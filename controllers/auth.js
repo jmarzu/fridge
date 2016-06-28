@@ -10,7 +10,7 @@ router.get('/signup', function(req, res) {
 
 router.post('/signup', function(req, res) {
   db.user.findOrCreate({
-    where: { email: req.body.email},
+    where: { email: req.body.email },
     defaults: {
       name: req.body.name,
       password: req.body.password
@@ -36,7 +36,7 @@ router.get('/login', function(req, res) {
 });
 
 router.post('/login', passport.authenticate('local', {
-  successRedirect: '../mainPage',
+  successRedirect: '/mainPage',
   failureRedirect: '/auth/login'
 }));
 
