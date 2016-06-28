@@ -10,6 +10,10 @@ h1 {
   font-family: 'Roboto Salb', serif;
 }
 
+h2, h4 {
+  color: white;
+}
+
 h3 {
   font-size: 50px;
   font-family: 'Roboto Salb', serif;
@@ -38,16 +42,12 @@ form {
   text-align: left;
 }
 
-.recipeImage {
+.materialboxed {
+  width: 150px;
   height: 100px;
 }
 
-.btnResults {
-  display: flex;
-  text-align: center;
-}
-
-.imageTitle {
+.imageDiv {
   background: rgba(255, 255, 255, 0.5);
   background-size: cover;
 

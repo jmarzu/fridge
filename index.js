@@ -37,6 +37,7 @@ app.get('/profile', isLoggedIn, function(req, res) {
 app.use('/searchFridge', require('./controllers/searchFridge'));
 app.use('/auth', require('./controllers/auth'));
 app.use('/mainPage', require('./controllers/mainPage'));
+app.use('/profile', require('./controllers/profile'));
 
 var server = app.listen(process.env.PORT || 3000);
 

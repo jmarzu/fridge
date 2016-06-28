@@ -11,7 +11,7 @@ router.get('/', function(req, res) {
     }, function(error, response, body) {
       if(!error && response.statusCode === 200) {
         var data = JSON.parse(body);
-        res.render('recipies', { data: data.results });
+        res.render('recipes', { data: data.results });
       }
   });
 });
