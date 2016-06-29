@@ -67,12 +67,16 @@ form {
   color: blue;
 }
 
+
 @media (max-width: 800px) {
-  .mainPage {
-    margin-top: 300px;
-  }
   .btn {
     min-height: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .mainPage {
+    margin-top: 300px;
   }
 }
 
