@@ -7,11 +7,11 @@
 
 <% favorite.forEach(function(favorites) { %>
   <div class="profileFavorites">
-    <form action="/profile/<%= favorites.userId %>" method="DELETE">
+    <form action="/profile/delete/<%= favorites.userId %>" method="POST">
       <h4><a href="<%= favorites.href %>"><%= favorites.title %></a></h4>
       <input type="hidden" name="title" value="<%= favorites.title  %>">
       <input type="hidden" name="href" value="<%= favorites.href  %>">
-      <button onclick="Materialize.toast('Favorite Removed', 4000)" class="btn btn-primary red" type="submit">Delete</button>
+      <input class="btn btn-primary red" type="submit" value="Delete">
     </form>
   </div>
 <% }); %>

@@ -4,7 +4,7 @@ var db = require('../models');
 var isLoggedIn = require('../middleware/isLoggedIn');
 var router = express.Router();
 
-router.post('/', function(req, res) {
+router.post('/:id', function(req, res) {
   db.favorite.create({
     userId: req.user.id,
     title: req.body.title,
@@ -24,9 +24,7 @@ router.get('/', isLoggedIn, function(req, res) {
   });
 });
 
-router.get('/:id', function(req, res) {
-  console.log('clicked button');
-  console.log('id: ', req.user.id, 'title: ', req.body.title, 'href: ', req.body.href); 
+router.post('/delete/:id', function(req, res) {
   db.favorite.destroy({
     where: {
       userId: req.user.id,
@@ -34,7 +32,6 @@ router.get('/:id', function(req, res) {
       href: req.body.href
     }
   }).then(function(deletedFavorite) {
-    console.log('##$$ ', deletedFavorite);
     res.redirect('/profile');
   });
 });

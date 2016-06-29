@@ -3,17 +3,35 @@ var bodyParser = require('body-parser');
 var db = require('../models');
 var router = express.Router();
 
-router.get('/', function(req, res) {
-  res.render('shoppinglist');
-});
-
 router.post('/',function(req, res) {
   db.shoppinglist.create({
     userId: req.user.id,
-    name: req.body.name,
-    type: req.body.type
+    food: req.body.food,
+    date: req.body.date
   }).then(function(list) {
-    console.log(list.get());
+    res.redirect('shoppinglist');
+  });
+});
+
+router.get('/', function(req, res) {
+  db.shoppinglist.findAll({
+    where: {
+      userId: req.user.id
+    }
+  }).then(function(list) {
+    res.render('shoppinglist', { list: list });
+  });
+});
+
+router.post('/delete', function(req, res) {
+  db.shoppinglist.destroy({
+    where: {
+      userId: req.user.id,
+      food: req.body.food,
+      date: req.body.date
+    }
+  }).then(function(food) {
+    res.redirect('shoppinglist')
   });
 });
 

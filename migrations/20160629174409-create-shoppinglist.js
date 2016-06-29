@@ -11,10 +11,10 @@ module.exports = {
       userId: {
         type: Sequelize.INTEGER
       },
-      name: {
+      food: {
         type: Sequelize.STRING
       },
-      type: {
+      date: {
         type: Sequelize.STRING
       },
       createdAt: {

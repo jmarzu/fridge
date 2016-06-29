@@ -1,5 +1,4 @@
-<h1>This is the shopping list</h1>
-
+<h1>Shopping List</h1>
 
 <form action="/shoppinglist" method="POST">
  
@@ -7,27 +6,20 @@
   <legend>Shopping List</legend>
     <div class="form-group">
       <span class="help-block"></span>
-      <input type="text" class="form-control" name="name" placeholder="What's on your list?">
+      <input type="text" class="form-control" name="food" placeholder="What's on your list?">
     </div>
   </div>
+  <div class="input-field">
+   <input type="date" name="date" class="datepicker">
   
-    <div class="input-field">
-      <div class="input-field col s12">
-        <select>
-          <option value="" disabled selected>Choose your option</option>
-          <option name="type" value="beef">Beef</option>
-          <option name="type" value="poultry">Poultry</option>
-          <option name="type" value="pork">Pork</option>
-          <option name="type" value="dairy">Dairy</option>
-          <option name="type" value="grains">Grains</option>
-          <option name="type" value="vegetables">Vegetables</option>
-          <option name="type" value="fruit">Fruit</option>
-          <option name="type" value="other">Other</option>
-        </select>
-        <label>Materialize Select</label>
-      </div>
-    </div>
-    <button type="submit" class="btn">Add to List</button>
-        
+   <button type="submit" class="btn">Add to List</button>
+  </div>   
 </form>
 
+<% list.forEach(function(lists) { %>
+  <div class="showList">
+    <h5><%= lists.food %></h5>
+    <h5>Expires on: <%= lists.date %></h5>
+    <button type="delete" class="btn red">Delete</button>
+  </div>
+<% }); %>

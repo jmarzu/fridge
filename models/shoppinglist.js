@@ -2,12 +2,13 @@
 module.exports = function(sequelize, DataTypes) {
   var shoppinglist = sequelize.define('shoppinglist', {
     userId: DataTypes.INTEGER,
-    name: DataTypes.STRING,
-    type: DataTypes.STRING
+    food: DataTypes.STRING,
+    date: DataTypes.STRING
   }, {
     classMethods: {
       associate: function(models) {
         // associations can be defined here
+        models.shoppinglist.belongsTo(models.user);
       }
     }
   });
