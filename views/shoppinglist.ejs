@@ -1,0 +1,33 @@
+<h1>This is the shopping list</h1>
+
+
+<form action="/shoppinglist" method="POST">
+ 
+  <div class="input-field"> 
+  <legend>Shopping List</legend>
+    <div class="form-group">
+      <span class="help-block"></span>
+      <input type="text" class="form-control" name="name" placeholder="What's on your list?">
+    </div>
+  </div>
+  
+    <div class="input-field">
+      <div class="input-field col s12">
+        <select>
+          <option value="" disabled selected>Choose your option</option>
+          <option name="type" value="beef">Beef</option>
+          <option name="type" value="poultry">Poultry</option>
+          <option name="type" value="pork">Pork</option>
+          <option name="type" value="dairy">Dairy</option>
+          <option name="type" value="grains">Grains</option>
+          <option name="type" value="vegetables">Vegetables</option>
+          <option name="type" value="fruit">Fruit</option>
+          <option name="type" value="other">Other</option>
+        </select>
+        <label>Materialize Select</label>
+      </div>
+    </div>
+    <button type="submit" class="btn">Add to List</button>
+        
+</form>
+

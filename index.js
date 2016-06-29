@@ -30,14 +30,11 @@ app.get('/', function(req, res) {
   res.render('mainPage');
 });
 
-app.get('/profile', isLoggedIn, function(req, res) {
-  res.render('profile');
-});
-
 app.use('/searchFridge', require('./controllers/searchFridge'));
 app.use('/auth', require('./controllers/auth'));
 app.use('/mainPage', require('./controllers/mainPage'));
 app.use('/profile', require('./controllers/profile'));
+app.use('/shoppinglist', require('./controllers/shoppinglist'));
 
 var server = app.listen(process.env.PORT || 3000);
 

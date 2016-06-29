@@ -1,7 +1,17 @@
 <h2>Profile page</h2>
 
 <h3><a href="/">Home</a></h3>
+<form action="/shoppinglist" method="GET">
+  <button typy="submit" class="btn btn-primary">Shopping List</button>
+</form>
 
-<div class="profileFavorites">
-  <h4><a href="</a><%= favorite.href %>"><%= favorite.title %></h4>
-</div>
+<% favorite.forEach(function(favorites) { %>
+  <div class="profileFavorites">
+    <form action="/profile/<%= favorites.userId %>" method="DELETE">
+      <h4><a href="<%= favorites.href %>"><%= favorites.title %></a></h4>
+      <input type="hidden" name="title" value="<%= favorites.title  %>">
+      <input type="hidden" name="href" value="<%= favorites.href  %>">
+      <button onclick="Materialize.toast('Favorite Removed', 4000)" class="btn btn-primary red" type="submit">Delete</button>
+    </form>
+  </div>
+<% }); %>
