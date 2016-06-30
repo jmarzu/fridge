@@ -21,9 +21,8 @@
     <div class="showList">
       <h5><%= lists.food %></h5>
       <h5>Expires on: <%= lists.date %></h5>
-      <input type="hidden" name="food" value="<%= lists.food  %>">
-      <input type="hidden" name="date" value="<%= lists.date  %>">
-      <input class="btn btn-primary red" type="submit" value="Delete">
+      <input type="hidden" name="id" id="listId" value="<%= lists.id  %>">
+      <input class="deleteList btn btn-primary red" type="submit" value="Delete" action="/shoppinglist/delete/">
     </div>
   </form>
 <% }); %>

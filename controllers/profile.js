@@ -24,16 +24,16 @@ router.get('/', isLoggedIn, function(req, res) {
   });
 });
 
-router.post('/delete/:id', function(req, res) {
-  db.favorite.destroy({
+router.delete('/delete/:id', function(req, res) {
+  db.user.findOne({
     where: {
-      userId: req.user.id,
-      title: req.body.title,
-      href: req.body.href
+      id: req.user.id
     }
-  }).then(function(deletedFavorite) {
-    res.redirect('/profile');
+  }).then(function(user) {
+    user.removeFavorite(req.params.id).then(function() {
+    res.send({ message: 'success' });
+    })
   });
 });
 
-module.exports = router;
+module.exports = router; 

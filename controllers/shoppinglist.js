@@ -23,15 +23,16 @@ router.get('/', function(req, res) {
   });
 });
 
-router.post('/delete', function(req, res) {
-  db.shoppinglist.destroy({
+router.delete('/delete/:id', function(req, res) {
+  console.log('in the delete')
+  db.user.findOne({
     where: {
-      userId: req.user.id,
-      food: req.body.food,
-      date: req.body.date
+      id: req.user.id
     }
-  }).then(function(food) {
-    res.redirect('/shoppinglist')
+  }).then(function(user) {
+    user.removeShoppinglist(req.params.id).then(function() {
+    res.send({ message: 'success' });
+    })
   });
 });
 

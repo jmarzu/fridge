@@ -6,12 +6,11 @@
 </form>
 
 <% favorite.forEach(function(favorites) { %>
-  <div class="profileFavorites">
-    <form action="/profile/delete/<%= favorites.userId %>" method="POST">
+    <form action="/profile/delete/<%= favorites.userId %>" method="DELETE">
+    <div class="profileFavorites" id="profileFavorites">
       <h4><a href="<%= favorites.href %>"><%= favorites.title %></a></h4>
-      <input type="hidden" name="title" value="<%= favorites.title  %>">
-      <input type="hidden" name="href" value="<%= favorites.href  %>">
-      <input class="btn btn-primary red" type="submit" value="Delete">
+      <input type="hidden" name="id" id="id" value="<%= favorites.id  %>">
+      <input class="deleteBtn btn btn-primary red" type="button" value="Delete" action="/profile/delete/">
+      </div>
     </form>
-  </div>
 <% }); %>

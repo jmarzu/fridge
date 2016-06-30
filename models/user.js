@@ -35,6 +35,7 @@ module.exports = function(sequelize, DataTypes) {
       associate: function(models) {
         // associations can be defined here
        models.user.hasMany(models.favorite);
+       models.user.hasMany(models.shoppinglist);
       }
     },
     instanceMethods: {
