@@ -9,7 +9,7 @@ router.post('/',function(req, res) {
     food: req.body.food,
     date: req.body.date
   }).then(function(list) {
-    res.redirect('shoppinglist');
+    res.redirect('/shoppinglist');
   });
 });
 
@@ -31,7 +31,7 @@ router.post('/delete', function(req, res) {
       date: req.body.date
     }
   }).then(function(food) {
-    res.redirect('shoppinglist')
+    res.redirect('/shoppinglist')
   });
 });
 

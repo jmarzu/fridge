@@ -17,9 +17,14 @@
 </form>
 
 <% list.forEach(function(lists) { %>
-  <div class="showList">
-    <h5><%= lists.food %></h5>
-    <h5>Expires on: <%= lists.date %></h5>
-    <button type="delete" class="btn red">Delete</button>
-  </div>
+  <form action="/shoppinglist/delete" method="POST">
+    <div class="showList">
+      <h5><%= lists.food %></h5>
+      <h5>Expires on: <%= lists.date %></h5>
+      <input type="hidden" name="food" value="<%= lists.food  %>">
+      <input type="hidden" name="date" value="<%= lists.date  %>">
+      <input class="btn btn-primary red" type="submit" value="Delete">
+    </div>
+  </form>
 <% }); %>
+
