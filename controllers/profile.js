@@ -32,7 +32,7 @@ router.delete('/delete/:id', function(req, res) {
   }).then(function(user) {
     user.removeFavorite(req.params.id).then(function() {
     res.send({ message: 'success' });
-    })
+    });
   });
 });
 

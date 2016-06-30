@@ -3,10 +3,9 @@ body {
   font-family: 'Roboto Salb', serif;
   background: url("/img/fridge.jpg") no-repeat center center fixed;
   background-size: cover;
-  -webkit- background: url("/img/fridge.jpg") no-repeat center center fixed;
-  -webkit- background-size: cover;
-  -moz- background: url("/img/fridge.jpg") no-repeat center center fixed;
-  -moz- background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
 }
 
 h1 {

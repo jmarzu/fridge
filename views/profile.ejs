@@ -1,16 +1,17 @@
 <h2>Profile page</h2>
 
 <h3><a href="/">Home</a></h3>
+
 <form action="/shoppinglist" method="GET">
   <button typy="submit" class="btn btn-primary">Shopping List</button>
 </form>
 
 <% favorite.forEach(function(favorites) { %>
-    <form action="/profile/delete/<%= favorites.userId %>" method="DELETE">
+  <form action="/profile/delete/<%= favorites.userId %>" method="DELETE">
     <div class="profileFavorites" id="profileFavorites">
       <h4><a href="<%= favorites.href %>"><%= favorites.title %></a></h4>
       <input type="hidden" name="id" id="id" value="<%= favorites.id  %>">
       <input class="deleteBtn btn btn-primary red" type="button" value="Delete" action="/profile/delete/">
-      </div>
-    </form>
+    </div>
+  </form>
 <% }); %>
