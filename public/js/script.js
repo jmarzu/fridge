@@ -11,7 +11,7 @@ $(document).ready(function() {
     var that = this;
     var url = $(this).attr('action');
     var id = $(this).parent()[0].children[1].value;
-
+  
     $.ajax({
       method: 'DELETE',
       url: url + id,

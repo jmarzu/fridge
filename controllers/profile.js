@@ -4,7 +4,7 @@ var db = require('../models');
 var isLoggedIn = require('../middleware/isLoggedIn');
 var router = express.Router();
 
-router.post('/:id', function(req, res) {
+router.post('/:id', isLoggedIn, function(req, res) {
   db.favorite.create({
     userId: req.user.id,
     title: req.body.title,
